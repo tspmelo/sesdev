@@ -1,0 +1,20 @@
+name: Upload OBS Package
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Publish to OBS
+      run: actions/setup-obs@master
+      with:
+        obs user:  'username'
+        obs pass:  'password'
+        obs email:  'email@emaillll.com'
+        obs project:  'test:sdf'
+        obs package:  'sesdev'
+        full name:  'Tiago Melo'

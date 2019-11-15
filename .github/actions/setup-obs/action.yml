@@ -1,0 +1,27 @@
+name: 'Setup OBS'
+description: 'Greet someone and record the time'
+inputs:
+  obs user:  # id of input
+    description: 'Who to greet'
+    required: true
+  obs pass:  # id of input
+    description: 'Who to greet'
+    required: true
+  obs email:  # id of input
+    description: 'Who to greet'
+    required: true
+  obs project:  # id of input
+    description: 'Who to greet'
+    required: true
+  obs package:  # id of input
+    description: 'Who to greet'
+    required: true
+  full name:  # id of input
+    description: 'Who to greet'
+    required: true
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
